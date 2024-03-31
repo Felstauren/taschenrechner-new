@@ -1,13 +1,191 @@
 
-.container {
-    display: flex;
-    position: relative;
-    top: 400px;
-    left: 30%;
+
+
+body {
+    background-color:blanchedalmond;
 }
 
-body{
+p {
+    height: 50px;
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    width: 600px;
+    height: 450px;
+
     position: relative;
-    left: 30%;
-    top: 300px;
+    top: 200px;
+    left: 600px;
+}
+
+.middle {
+    text-align: center;
+    align-content: center;
+}
+
+#number1{
+    grid-column-start:1 ;
+    grid-column-end: 1;
+
+    grid-row-start: 6; 
+    grid-row-end:6 ;
+}
+
+#number2{
+    grid-column-start:2 ;
+    grid-column-end: 2;
+
+    grid-row-start: 6; 
+    grid-row-end:6; 
+}
+
+#number3{
+    grid-column-start:3 ;
+    grid-column-end: 3;
+
+    grid-row-start: 6; 
+    grid-row-end:6 ;
+}
+
+#number4{
+    grid-column-start:1 ;
+    grid-column-end: 1;
+
+    grid-row-start: 5; 
+    grid-row-end:5; 
+}
+
+#number5{
+    grid-column-start:2 ;
+    grid-column-end: 2;
+
+    grid-row-start: 5; 
+    grid-row-end:5 ; 
+}
+
+#number6{
+    grid-column-start:3 ;
+    grid-column-end: 3;
+
+    grid-row-start: 5; 
+    grid-row-end:5 ; 
+}
+
+#number7{
+    grid-column-start:1 ;
+    grid-column-end: 1;
+
+    grid-row-start: 4; 
+    grid-row-end:4; 
+}
+
+#number8{
+    grid-column-start:2 ;
+    grid-column-end: 2;
+
+    grid-row-start:4; 
+    grid-row-end:4; 
+}
+
+#number9{
+    grid-column-start:3 ;
+    grid-column-end: 3;
+
+    grid-row-start:4; 
+    grid-row-end:4; 
+}
+
+#number0{
+    grid-column-start:1 ;
+    grid-column-end: span 2;
+
+    grid-row-start:7; 
+    grid-row-end:7; 
+}
+
+#komma {
+    grid-row-start:7; 
+    grid-row-end:7; 
+
+    grid-column-start:3 ;
+    grid-column-end: 3;
+}
+
+.Screen {
+    grid-column-start:1 ;
+    grid-column-end:span 4;
+
+    grid-row-start:1; 
+    grid-row-end:1; 
+
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.operation{
+    grid-column-start:4 ;
+    grid-column-end:4;
+
+    text-align: center;
+}
+
+.CE {
+    grid-column-start:2;
+    grid-column-end: 2;
+
+    grid-row-start:2; 
+    grid-row-end:2;
+
+    text-align: center;
+}
+
+.C {
+    grid-column-start:3;
+    grid-column-end: 3;
+
+    grid-row-start:2; 
+    grid-row-end:2;
+
+    text-align: center;
+}
+
+.delete {
+    grid-column-start:4;
+    grid-column-end: 4;
+
+    grid-row-start:2; 
+    grid-row-end:2;
+}
+
+.Prozent {
+    grid-column-start:1;
+    grid-column-end: 1;
+
+    grid-row-start:2; 
+    grid-row-end:2;
+
+    text-align: center;
+    text-align: center;
+}
+
+.active {
+    border: 1px solid lightgray;
+    background-color: lightgray;
+}
+
+.middle:hover{
+    border: 1px solid lightgray;
+    opacity: 1px;
+}
+
+
+textarea {
+    text-align: right;
+    font-size: 50px;
+    align-content: center;
 }

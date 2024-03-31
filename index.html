@@ -7,34 +7,31 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="Addition">
-    <input type="text" id="add1"  size="6" /> +
-    <input type="text" id="add2"  size="6" /> 
-    <input type="submit" value="=" onclick="RechnenAddition()"/>  
-    <input type="text" id="output" disabled="disabled" />
-</div>
+    <div class="container">
+        <p class="number middle" id="number1" value="1">1</p>
+        <p class="number middle" id="number2" value="2">2</p>
+        <p class="number middle" id="number3" value="3">3</p>
+        <p class="number middle" id="number4" value="4">4</p>
+        <p class="number middle" id="number5" value="5">5</p>
+        <p class="number middle" id="number6" value="6">6</p>
+        <p class="number middle" id="number7" value="7">7</p>
+        <p class="number middle" id="number8" value="8">8</p>
+        <p class="number middle" id="number9" value="9">9</p>
+        <p class="number middle" id="number0" value="0">0</p>
+        <p class="number middle" id="komma">,</p>
+        <p class="operation middle">/</p>
+        <p class="operation middle">x</p>
+        <p class="operation middle">-</p>
+        <p class="operation middle">+</p>
+        <p class="Ergebnis middle">=</p>
 
-    <div id="Substraktion">
-        <input type="text" id="input1"  size="6" /> -
-        <input type="text" id="input2"  size="6" /> 
-        <input type="submit" value="=" onclick="RechnenSubstraktion()"/>  
-        <input type="text" id="output2" disabled="disabled" />
+        <p class="Prozent middle">%</p>
+        <p class="CE middle">CE</p>
+        <p class="C middle">C</p>
+        <p class="delete middle"><img src="./delete.png"></p>
+
+        <textarea type="number" class="Screen" disabled="disabled"></textarea>
     </div>
-
-    <div id="Multiplikation">
-        <input type="text" id="input3"  size="6" /> x
-        <input type="text" id="input4"  size="6" /> 
-        <input type="submit" value="=" onclick="RechnenMultiplikation()"/>  
-        <input type="text" id="output3" disabled="disabled" />
-    </div>
-
-    <div id="Division">
-        <input type="text" id="input5"  size="6" /> /
-        <input type="text" id="input6"  size="6" /> 
-        <input type="submit" value="=" onclick="RechnenDivision()"/>  
-        <input type="text" id="output4" disabled="disabled" />
-    </div>
-
 
     <script src="app.js"></script>
 

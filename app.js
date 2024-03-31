@@ -1,62 +1,55 @@
 
+const inputNumber = document.querySelectorAll(".number");
+const inputArithemic = document.querySelectorAll(".operation");
+const inputErgebnis = document.querySelectorAll(".Ergebnis");
+let screen = document.querySelector("textarea");
+
+        for (let i = 0; i<inputNumber.length; i++){
+            inputNumber[i].addEventListener("click", (e) => {
+                const Zahl1= Number(inputNumber[i].innerHTML)
+                       screen.value = Zahl1
+
+                       for (let i = 0; i<inputArithemic.length;i++){
+                        inputArithemic[i].addEventListener("click", () => {
+                        arithemic = inputArithemic[i].innerHTML
+                                screen.value =`${Zahl1} ${arithemic}`;
+
+                                for (let i = 0; i<inputNumber.length; i++){
+                                    inputNumber[i].addEventListener("click", () =>{
+                                        Zahl2 = Number(inputNumber[i].innerHTML)
+                                                screen.value = `${Zahl1} ${arithemic} ${Zahl2}`
 
 
-function RechnenAddition(){
-let x = document.getElementById('add1').value;
-let y = document.getElementById('add2').value;
-let output = document.querySelector('#output')
-x = x.replace(/,/, ".");     // Ersetzt ein Komma in der 
-y = y.replace(/,/, ".");     // Zahl durch einen Dezimalpunkt
+                                                for (let i=0; i<inputErgebnis.length;i++){
+                                                    inputErgebnis[i].addEventListener("click", () =>{
+                                                        Ergebnis = inputErgebnis[i].innerHTML
+                                                            if(arithemic == "+"){
+                                                                screen.value = Zahl1 + Zahl2
+                                                            }
 
+                                                            if(arithemic == "-"){
+                                                                screen.value = Zahl1 - Zahl2
+                                                            }
 
-    if (isNaN(parseFloat(x)) || isNaN(parseFloat(y))) {
-        output.value = "Fehler: keine Zahl";
-      } else {
-        output.value = parseFloat(x) + parseFloat(y);
-      }
+                                                            if(arithemic == "x"){
+                                                                screen.value = Zahl1 * Zahl2
+                                                            }
+                                                            
+                                                            if(arithemic == "/"){
+                                                                screen.value = Zahl1 / Zahl2
+                                                            }                                                  
+                                                            
+                                                    })
+                                                }
+                                            
+                                    })
+                                }
+    })
     }
+    
+    })
+    }
+    
+                            
+                               
 
-
-function RechnenSubstraktion(){
-  let x = document.querySelector('#input1').value
-  let y =document.querySelector('#input2').value
-  let output = document.querySelector('#output2')
-  x = x.replace(/,/, ".");
-  y= y.replace(/,/, ".");
-
-  if(isNaN(parseFloat(x)) || isNaN(parseFloat(y))){
-    output.value = "Fehler: keine Zahl"
-  } else {
-    output.value = parseFloat(x) - parseFloat(y);
-  }
-}
-
-
-function RechnenMultiplikation(){
-  let x = document.querySelector('#input3').value
-  let y =document.querySelector('#input4').value
-  let output = document.querySelector('#output3')
-  x = x.replace(/,/, ".");
-  y= y.replace(/,/, ".");
-
-  if(isNaN(parseFloat(x)) || isNaN(parseFloat(y))){
-    output.value = "Fehler: keine Zahl"
-  } else {
-    output.value = parseFloat(x) * parseFloat(y);
-  }
-}
-
-
-function RechnenDivision(){
-  let x = document.querySelector('#input5').value
-  let y =document.querySelector('#input6').value
-  let output = document.querySelector('#output4')
-  x = x.replace(/,/, ".");
-  y= y.replace(/,/, ".");
-
-  if(isNaN(parseFloat(x)) || isNaN(parseFloat(y))){
-    output.value = "Fehler: keine Zahl"
-  } else {
-    output.value = parseFloat(x) / parseFloat(y);
-  }
-}
