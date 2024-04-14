@@ -1,55 +1,69 @@
 
 const inputNumber = document.querySelectorAll(".number");
 const inputArithemic = document.querySelectorAll(".operation");
-const inputErgebnis = document.querySelectorAll(".Ergebnis");
+const ButtonResult = document.querySelector(".Ergebnis");
 let screen = document.querySelector("textarea");
+const delAll = document.querySelector(".C");
+const delLast = document.querySelector(".delete")
 
-        for (let i = 0; i<inputNumber.length; i++){
-            inputNumber[i].addEventListener("click", (e) => {
-                const Zahl1= Number(inputNumber[i].innerHTML)
-                       screen.value = Zahl1
-
-                       for (let i = 0; i<inputArithemic.length;i++){
-                        inputArithemic[i].addEventListener("click", () => {
-                        arithemic = inputArithemic[i].innerHTML
-                                screen.value =`${Zahl1} ${arithemic}`;
-
-                                for (let i = 0; i<inputNumber.length; i++){
-                                    inputNumber[i].addEventListener("click", () =>{
-                                        Zahl2 = Number(inputNumber[i].innerHTML)
-                                                screen.value = `${Zahl1} ${arithemic} ${Zahl2}`
+// put in Number
+for (let i = 0; i<inputNumber.length; i++){
+    inputNumber[i].addEventListener("click", (e) => {
+        const number= Number(inputNumber[i].innerHTML)
+        screen.innerHTML += number
+ })}
 
 
-                                                for (let i=0; i<inputErgebnis.length;i++){
-                                                    inputErgebnis[i].addEventListener("click", () =>{
-                                                        Ergebnis = inputErgebnis[i].innerHTML
-                                                            if(arithemic == "+"){
-                                                                screen.value = Zahl1 + Zahl2
-                                                            }
 
-                                                            if(arithemic == "-"){
-                                                                screen.value = Zahl1 - Zahl2
-                                                            }
+// put in Operation
+for (let i = 0; i<inputArithemic.length; i++){
+    inputArithemic[i].addEventListener("click", (e) => {
+        const operation= inputArithemic[i].innerHTML
+        
+        if(screen.innerHTML == ""){
+            alert("Bitte Zahl eingeben")
+        }else if(operation == "+"){
+            screen.innerHTML += " + "
+        }
+        
+        if(operation == "-"){
+            screen.innerHTML += " - "
+        }
+        if(operation == "x"){
+            screen.innerHTML += " * "
+        }
+        if(operation == "/"){
+            screen.innerHTML += " / "
 
-                                                            if(arithemic == "x"){
-                                                                screen.value = Zahl1 * Zahl2
-                                                            }
-                                                            
-                                                            if(arithemic == "/"){
-                                                                screen.value = Zahl1 / Zahl2
-                                                            }                                                  
-                                                            
-                                                    })
-                                                }
-                                            
-                                    })
-                                }
-    })
+        }
+        
+        
+ })}
+
+
+// result 
+ButtonResult.addEventListener("click", e =>{
+    result = eval(screen.innerHTML)
+    screen.innerHTML = result
+})
+
+
+// delete All
+
+delAll.addEventListener("click", e =>{
+    screen.innerHTML = ""
+})
+
+
+
+//delete Last
+delLast.addEventListener("click", e =>{
+    if(screen.innerHTML.endsWith(' ')) {
+        screen.innerHTML = screen.innerHTML.slice(0, -3)
+    } else {
+        screen.innerHTML = screen.innerHTML.slice(0, -1)
     }
     
-    })
-    }
-    
-                            
-                               
+})
+
 
