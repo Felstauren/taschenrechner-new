@@ -9,6 +9,8 @@ const delLast = document.querySelector(".delete")
 // put in Number
 for (let i = 0; i<inputNumber.length; i++){
     inputNumber[i].addEventListener("click", (e) => {
+        
+        // switch komma with dot
         if(inputNumber[i].innerHTML = ","){
             screen.innerHTML += "."
         } else {   
