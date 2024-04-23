@@ -9,8 +9,14 @@ const delLast = document.querySelector(".delete")
 // put in Number
 for (let i = 0; i<inputNumber.length; i++){
     inputNumber[i].addEventListener("click", (e) => {
-        const number= Number(inputNumber[i].innerHTML)
-        screen.innerHTML += number
+        if(inputNumber[i].innerHTML = ","){
+            screen.innerHTML += "."
+        } else {   
+            const number= Number(inputNumber[i].innerHTML)
+            screen.innerHTML += number
+        }
+        
+       
  })}
 
 
@@ -39,6 +45,8 @@ for (let i = 0; i<inputArithemic.length; i++){
         
         
  })}
+
+
 
 
 // result 
